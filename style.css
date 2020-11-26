@@ -1,0 +1,42 @@
+.card-table {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #eee;
+    width: 70%;
+    height: 50%;
+}
+#card {
+    background-color: #ffffff;
+    width: 25%;
+    height: 100%;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: thin;
+    border-color: black;
+    left: 75%;
+}
+#card-suit {
+    position: relative;
+    top: 15%;
+    left: 92%;
+    transform: translate(-50%, -50%);
+    color: red;
+    font-size: 96px;
+}
+#card-num {
+    position: relative;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+#add-card {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    width: 15%;
+    height: 10%;
+}
