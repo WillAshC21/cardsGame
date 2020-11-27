@@ -16,16 +16,66 @@
     border-width: thin;
     border-color: black;
     left: 75%;
+    float: left;
 }
 #card-suit {
     position: relative;
     top: 15%;
     left: 92%;
     transform: translate(-50%, -50%);
-    color: red;
     font-size: 96px;
 }
 #card-num {
+    position: relative;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+#card2 {
+    background-color: #ffffff;
+    width: 25%;
+    height: 100%;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: thin;
+    border-color: black;
+    left: 75%;
+    float: left;
+}
+#card-suit2 {
+    position: relative;
+    top: 15%;
+    left: 92%;
+    transform: translate(-50%, -50%);
+    font-size: 96px;
+}
+#card-num2 {
+    position: relative;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+#card3 {
+    background-color: #ffffff;
+    width: 25%;
+    height: 100%;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: thin;
+    border-color: black;
+    left: 75%;
+    float: left;
+}
+#card-suit3 {
+    position: relative;
+    top: 15%;
+    left: 92%;
+    transform: translate(-50%, -50%);
+    font-size: 96px;
+}
+#card-num3 {
     position: relative;
     top: 0%;
     left: 50%;
