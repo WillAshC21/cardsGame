@@ -1,3 +1,21 @@
+let border = document.createElement('div');
+border.setAttribute('id', `game-table`); 
+border.innerHTML = `<h1 id="game-score"></h1><div class="card-table">
+<div id="card1"><h1 id="card-num">` +  `</h1><h1 id="card-suit">`  + `</h1></div>
+<div id="card2"><h1 id="card-num2">` + `</h1><h1 id="card-suit2">` + `</h1></div>
+<div id="card3"><h1 id="card-num3">` + `</h1><h1 id="card-suit3">` + `</h1></div>
+<div id="card4"><h1 id="card-num4">` + `</h1><h1 id="card-suit4">` + `</h1></div>
+</div>`;
+
+document.getElementById('body-box').appendChild(border);
+for (let i  = 1; i <= 4; i++) {
+    let numcard = "card" + i;
+document.getElementById(numcard).style.backgroundColor = "red";
+}
+
+document.getElementById('add-card').addEventListener("click", table);
+
+function table() {
 var suits = ["♠", "♥", "♣", "♦"];
 var type = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 
@@ -7,12 +25,13 @@ var count2 = Math.floor((Math.random() * 4) + 0);
 var tycount2 = Math.floor((Math.random() * 13) + 0);
 var count3 = Math.floor((Math.random() * 4) + 0);
 var tycount3 = Math.floor((Math.random() * 13) + 0);
-let border = document.createElement('div');
-border.setAttribute('id', `game-table`); 
-border.innerHTML = `<div class="card-table">
-<div id="card"><h1 id="card-num">` + type[tycount]+ suits[count] + `</h1><h1 id="card-suit">` + suits[count] + `</h1></div>
+var count4 = Math.floor((Math.random() * 4) + 0);
+var tycount4 = Math.floor((Math.random() * 13) + 0); 
+border.innerHTML = `<h1 id="game-score"></h1><div class="card-table">
+<div id="card1"><h1 id="card-num">` + type[tycount]+ suits[count] + `</h1><h1 id="card-suit">` + suits[count] + `</h1></div>
 <div id="card2"><h1 id="card-num2">` + type[tycount2]+ suits[count2] + `</h1><h1 id="card-suit2">` + suits[count2] + `</h1></div>
-<div id="card2"><h1 id="card-num3">` + type[tycount3]+ suits[count3] + `</h1><h1 id="card-suit3">` + suits[count3] + `</h1></div>
+<div id="card3"><h1 id="card-num3">` + type[tycount3]+ suits[count3] + `</h1><h1 id="card-suit3">` + suits[count3] + `</h1></div>
+<div id="card4"><h1 id="card-num4">` + type[tycount4]+ suits[count4] + `</h1><h1 id="card-suit4">` + suits[count4] + `</h1></div>
 </div>`;
 
 document.getElementById('body-box').appendChild(border);
@@ -37,6 +56,13 @@ if (suits[count3] ===  "♥" || suits[count3] ===  "♦") {
 } else {
     document.getElementById('card-suit3').style.color = "black";
     document.getElementById('card-num3').style.color = "black";
+}
+if (suits[count4] ===  "♥" || suits[count4] ===  "♦") {
+    document.getElementById('card-suit4').style.color = "red";
+    document.getElementById('card-num4').style.color = "red";
+} else {
+    document.getElementById('card-suit4').style.color = "black";
+    document.getElementById('card-num4').style.color = "black";
 }
 var scoretype = 0; 
 if (type[tycount] === type[tycount2] || type[tycount] === type[tycount3] || type[tycount2] === type[tycount3]) {
@@ -82,7 +108,41 @@ if (type[tycount] === type[tycount2] && type[tycount2] === type[tycount3]) {
         }
     } 
 } 
-
-function colorChange() {
-
+if (type[tycount] === type[tycount2] && type[tycount2] === type[tycount3] && type[tycount3] === type[tycount4]) {
+    scoretype = 1000;
+    document.getElementById('game-score').innerHTML = scoretype;
+    if (type[tycount] === "J" && type[tycount2] === "J" && type[tycount3] == "J" && type[tycount4] == "J") {
+        scoretype += 500;
+        document.getElementById('game-score').innerHTML = scoretype;
+        if (suits[count] === suits[count2] && suits[count2] === suits[count3] && suits[count3] === suits[count4]) {
+            scoretype += 2500;
+            document.getElementById('game-score').innerHTML = scoretype;
+        }
+    } else if (type[tycount] === "Q" && type[tycount2] === "Q" && type[tycount3] == "Q" && type[tycount4] == "Q") {
+        scoretype += 1000;
+        document.getElementById('game-score').innerHTML = scoretype;
+        if (suits[count] === suits[count2] && suits[count2] === suits[count3] && suits[count3] === suits[count4]) {
+            scoretype += 3000;
+            document.getElementById('game-score').innerHTML = scoretype;
+        }
+    } else if (type[tycount] === "K" && type[tycount2] === "K" && type[tycount3] == "K" && type[tycount4] == "K") {
+        scoretype += 1500;
+        document.getElementById('game-score').innerHTML = scoretype;
+        if (suits[count] === suits[count2] && suits[count2] === suits[count3] && suits[count3] === suits[count4]) {
+            scoretype += 3500;
+            document.getElementById('game-score').innerHTML = scoretype;
+        }
+    } else if (type[tycount] === "A" && type[tycount2] === "A" && type[tycount3] == "A") {
+        scoretype += 4000;
+        document.getElementById('game-score').innerHTML = scoretype;
+        if (suits[count] === suits[count2] && suits[count2] === suits[count3] && suits[count3] === suits[count4]) {
+            scoretype += 5000;
+            document.getElementById('game-score').innerHTML = scoretype;
+            if (suits[count] === "♠" && suits[count2] === "♠" && suits[count3] === "♠" && suits[count4] === "♠") {
+                scoretype += 5000;
+                document.getElementById('game-score').innerHTML = scoretype;
+            }
+        }
+    } 
+} 
 }

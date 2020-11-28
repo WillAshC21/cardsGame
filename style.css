@@ -1,3 +1,20 @@
+body {
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+#game-table {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: green;
+    width: 90%;
+    height: 90%;
+    border-radius: 40%;
+    border-color: brown;
+    border-style: solid;
+    border-width: 30px;
+}
 .card-table {
     position: absolute;
     top: 50%;
@@ -7,9 +24,9 @@
     width: 70%;
     height: 50%;
 }
-#card {
+#card1 {
     background-color: #ffffff;
-    width: 25%;
+    width: 24.7%;
     height: 100%;
     border-style: solid;
     border-radius: 5px;
@@ -23,7 +40,7 @@
     top: 15%;
     left: 92%;
     transform: translate(-50%, -50%);
-    font-size: 96px;
+    font-size: 97px;
 }
 #card-num {
     position: relative;
@@ -34,7 +51,7 @@
 }
 #card2 {
     background-color: #ffffff;
-    width: 25%;
+    width: 24.7%;
     height: 100%;
     border-style: solid;
     border-radius: 5px;
@@ -48,7 +65,7 @@
     top: 15%;
     left: 92%;
     transform: translate(-50%, -50%);
-    font-size: 96px;
+    font-size: 97px;
 }
 #card-num2 {
     position: relative;
@@ -59,7 +76,7 @@
 }
 #card3 {
     background-color: #ffffff;
-    width: 25%;
+    width: 24.7%;
     height: 100%;
     border-style: solid;
     border-radius: 5px;
@@ -73,9 +90,34 @@
     top: 15%;
     left: 92%;
     transform: translate(-50%, -50%);
-    font-size: 96px;
+    font-size: 97px;
 }
 #card-num3 {
+    position: relative;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+#card4 {
+    background-color: #ffffff;
+    width: 24.7%;
+    height: 100%;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: thin;
+    border-color: black;
+    left: 75%;
+    float: left;
+}
+#card-suit4 {
+    position: relative;
+    top: 15%;
+    left: 92%;
+    transform: translate(-50%, -50%);
+    font-size: 97px;
+}
+#card-num4 {
     position: relative;
     top: 0%;
     left: 50%;
@@ -89,4 +131,14 @@
     transform: translate(-50%, -50%);
     width: 15%;
     height: 10%;
+    font-size: 32px;
+    background: linear-gradient(90deg, rgba(95,198,4,1) 0%, rgba(12,255,12,1) 46%, rgba(0,255,115,1) 100%);
+}
+#game-score {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 64px;
+    background: linear-gradient(90deg, rgba(95,198,4,1) 0%, rgba(12,255,12,1) 46%, rgba(0,255,115,1) 100%);;
 }
